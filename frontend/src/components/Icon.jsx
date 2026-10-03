@@ -16,6 +16,17 @@ const paths = {
   plus: <><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></>,
   back: <><line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" /></>,
   lock: <><rect x="4" y="10" width="16" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></>,
+  alert: <><circle cx="12" cy="12" r="9" /><path d="M12 7.5v5.5M12 16.5h.01" /></>,
+  inbox: <><path d="M3 13h5l1.5 3h5L16 13h5" /><path d="M5.5 5h13l2.5 8v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5z" /></>,
+  x: <><line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" /></>,
+  check: <polyline points="4 12.5 9.5 18 20 6.5" />,
+  refresh: <><path d="M20 11a8 8 0 0 0-13.7-5.3L3 9" /><polyline points="3 4 3 9 8 9" /><path d="M4 13a8 8 0 0 0 13.7 5.3L21 15" /><polyline points="21 20 21 15 16 15" /></>,
+  'chevron-left': <polyline points="14.5 5 8 12 14.5 19" />,
+  'chevron-right': <polyline points="9.5 5 16 12 9.5 19" />,
+  download: <><path d="M12 3v12" /><polyline points="7.5 11 12 15.5 16.5 11" /><path d="M4 19h16" /></>,
+  upload: <><path d="M12 16V4" /><polyline points="7.5 8 12 3.5 16.5 8" /><path d="M4 19h16" /></>,
+  trash: <><path d="M4 7h16" /><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" /><path d="M6 7l1 13h10l1-13" /></>,
+  edit: <><path d="M4 20h4l10-10-4-4L4 16z" /><path d="M14 6l4 4" /></>,
 }
 
 export default function Icon({ name, className = 'w-4 h-4' }) {

@@ -1,4 +1,4 @@
-import { statusColor } from '../data'
+import { statusColor } from '../lib/enums'
 
 export default function Badge({ children }) {
   return (

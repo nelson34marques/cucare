@@ -1,4 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
 import Layout from './components/Layout'
 import { ToastProvider } from './components/Toast'
 import Login from './pages/Login'
@@ -19,27 +20,30 @@ import Configuracoes from './pages/Configuracoes'
 export default function App() {
   return (
     <BrowserRouter>
-      <ToastProvider>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/recuperar-senha" element={<RecuperarSenha />} />
-          <Route element={<Layout />}>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/pacientes" element={<Pacientes />} />
-            <Route path="/perfil-paciente" element={<PerfilPaciente />} />
-            <Route path="/relatorios" element={<Relatorios />} />
-            <Route path="/criar-relatorio" element={<CriarRelatorio />} />
-            <Route path="/preview-relatorio" element={<PreviewRelatorio />} />
-            <Route path="/exames" element={<Exames />} />
-            <Route path="/prescricoes" element={<Prescricoes />} />
-            <Route path="/documentos" element={<Documentos />} />
-            <Route path="/profissionais" element={<Profissionais />} />
-            <Route path="/auditoria" element={<Auditoria />} />
-            <Route path="/configuracoes" element={<Configuracoes />} />
-          </Route>
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </ToastProvider>
+      <AuthProvider>
+        <ToastProvider>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/recuperar-senha" element={<RecuperarSenha />} />
+            <Route element={<Layout />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/pacientes" element={<Pacientes />} />
+              <Route path="/pacientes/:id" element={<PerfilPaciente />} />
+              <Route path="/relatorios" element={<Relatorios />} />
+              <Route path="/relatorios/novo" element={<CriarRelatorio />} />
+              <Route path="/relatorios/:id" element={<PreviewRelatorio />} />
+              <Route path="/relatorios/:id/editar" element={<CriarRelatorio />} />
+              <Route path="/exames" element={<Exames />} />
+              <Route path="/prescricoes" element={<Prescricoes />} />
+              <Route path="/documentos" element={<Documentos />} />
+              <Route path="/profissionais" element={<Profissionais />} />
+              <Route path="/auditoria" element={<Auditoria />} />
+              <Route path="/configuracoes" element={<Configuracoes />} />
+            </Route>
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </ToastProvider>
+      </AuthProvider>
     </BrowserRouter>
   )
 }

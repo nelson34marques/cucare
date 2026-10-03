@@ -1,77 +1,130 @@
-export const patients = [
-  { id: 'P-0001', name: 'João Manuel Silva', dob: '12/03/1983', sex: 'M', last: '18/04/2025', status: 'Ativo' },
-  { id: 'P-0002', name: 'Ana Cristina Domingos', dob: '23/07/1990', sex: 'F', last: '16/04/2025', status: 'Ativo' },
-  { id: 'P-0003', name: 'Pedro António Cardoso', dob: '05/11/1982', sex: 'M', last: '10/04/2025', status: 'Ativo' },
-  { id: 'P-0004', name: 'Maria Isabel Santos', dob: '19/08/1977', sex: 'F', last: '09/04/2025', status: 'Ativo' },
-  { id: 'P-0005', name: 'José Ferreira', dob: '03/01/1975', sex: 'M', last: '05/04/2025', status: 'Inativo' },
-  { id: 'P-0006', name: 'Carla Mendes', dob: '27/09/1995', sex: 'F', last: '28/03/2025', status: 'Ativo' },
-  { id: 'P-0007', name: 'Luís Santos', dob: '14/12/1980', sex: 'M', last: '25/03/2025', status: 'Ativo' },
-  { id: 'P-0008', name: 'Helena Costa', dob: '05/06/1972', sex: 'F', last: '20/03/2025', status: 'Ativo' },
-]
+export const currentUser = {
+  id: 'U-0001',
+  nome: 'Carlos Mendes',
+  honorifico: 'Dr.',
+  email: 'carlos.mendes@hospital.ao',
+  especialidade: 'Clínica Geral',
+  registoProfissional: 'Reg. 4821',
+  perfil: 'medico',
+}
 
-export const reports = [
-  { n: 'R-0001', patient: 'João Manuel', type: 'Geral', prof: 'Dr. Carlos Mendes', date: '26/04/2025', status: 'Finalizado' },
-  { n: 'R-0002', patient: 'Ana Cristina', type: 'Consulta', prof: 'Dra. Ana Silva', date: '24/04/2025', status: 'Rascunho' },
-  { n: 'R-0003', patient: 'Pedro António', type: 'Exame', prof: 'Dr. Luís Ferro', date: '22/04/2025', status: 'Em revisão' },
-  { n: 'R-0004', patient: 'Maria Isabel', type: 'Alta', prof: 'Dr. Carlos Mendes', date: '20/04/2025', status: 'Corrigido' },
-  { n: 'R-0005', patient: 'José Ferreira', type: 'Acompanhamento', prof: 'Dra. Ana Silva', date: '18/04/2025', status: 'Finalizado' },
-]
+export const instituicao = {
+  nome: 'CuCare — Hospital Central',
+  morada: 'Av. 4 de Fevereiro, Luanda',
+  telefone: '+244 222 000 000',
+  sistema: 'CuCare — Sistema de Gestão Clínica',
+}
 
-export const activity = [
-  ['Carlos Mendes', 'Visualizou relatório', 'Ana Cristina', '24/04 14:30'],
-  ['Ana Silva', 'Criou paciente', 'Maria Isabel', '24/04 12:40'],
-  ['Luís Ferro', 'Editou relatório', 'Pedro António', '23/04 10:15'],
-]
+export const preferencias = {
+  novosRelatorios: true,
+  examesPendentes: true,
+  emailSemanal: false,
+  doisFatores: false,
+}
 
-export const documentos = [
-  ['Relatório_Consulta_Abr2025.pdf', 'João Manuel', 'Relatório', '214 KB', '26/04/2025', 'Validado'],
-  ['Hemograma_Completo.pdf', 'Ana Cristina', 'Exame', '98 KB', '24/04/2025', 'Validado'],
-  ['Receita_Omeprazol.pdf', 'João Manuel', 'Receita', '52 KB', '23/04/2025', 'Ativo'],
-  ['Declaracao_Medica.pdf', 'Maria Isabel', 'Declaração', '61 KB', '20/04/2025', 'Validado'],
-  ['Radiografia_Torax.jpg', 'Pedro António', 'Imagem', '1.4 MB', '18/04/2025', 'Validado'],
-]
-
-export const exames = [
-  ['João Manuel', 'Hemograma completo', 'Laboratório', '18/04/2025', 'Dr. Carlos Mendes', 'Validado'],
-  ['Ana Cristina', 'Radiografia de tórax', 'Radiologia', '16/04/2025', 'Dra. Ana Silva', 'Resultado disponível'],
-  ['Pedro António', 'Ecografia abdominal', 'Ecografia', '12/04/2025', 'Dr. Luís Ferro', 'Realizado'],
-  ['Maria Isabel', 'ECG', 'Cardiologia', '09/04/2025', 'Dr. Carlos Mendes', 'Solicitado'],
-]
-
-export const prescricoes = [
-  ['João Manuel', 'Omeprazol 20mg', 'Dr. Carlos Mendes', '26/04/2025', 'Ativa'],
-  ['Ana Cristina', 'Paracetamol 500mg', 'Dra. Ana Silva', '24/04/2025', 'Concluída'],
-  ['Maria Isabel', 'Losartan 50mg', 'Dr. Carlos Mendes', '20/04/2025', 'Ativa'],
-  ['José Ferreira', 'Amoxicilina 875mg', 'Dra. Ana Silva', '18/04/2025', 'Cancelada'],
+export const pacientes = [
+  { id: 'P-0001', nome: 'João Manuel Silva', dataNascimento: '1983-03-12', sexo: 'M', ultimaVisita: '2025-04-18', estado: 'Ativo' },
+  { id: 'P-0002', nome: 'Ana Cristina Domingos', dataNascimento: '1990-07-23', sexo: 'F', ultimaVisita: '2025-04-16', estado: 'Ativo' },
+  { id: 'P-0003', nome: 'Pedro António Cardoso', dataNascimento: '1982-11-05', sexo: 'M', ultimaVisita: '2025-04-10', estado: 'Ativo' },
+  { id: 'P-0004', nome: 'Maria Isabel Santos', dataNascimento: '1977-08-19', sexo: 'F', ultimaVisita: '2025-04-09', estado: 'Ativo' },
+  { id: 'P-0005', nome: 'José Ferreira', dataNascimento: '1975-01-03', sexo: 'M', ultimaVisita: '2025-04-05', estado: 'Inativo' },
+  { id: 'P-0006', nome: 'Carla Mendes', dataNascimento: '1995-09-27', sexo: 'F', ultimaVisita: '2025-03-28', estado: 'Ativo' },
+  { id: 'P-0007', nome: 'Luís Santos', dataNascimento: '1980-12-14', sexo: 'M', ultimaVisita: '2025-03-25', estado: 'Ativo' },
+  { id: 'P-0008', nome: 'Helena Costa', dataNascimento: '1972-06-05', sexo: 'F', ultimaVisita: '2025-03-20', estado: 'Ativo' },
 ]
 
 export const profissionais = [
-  ['Dr. Carlos Mendes', 'Clínica Geral', 'Reg. 4821', 'Consultas Externas', 'Ativo'],
-  ['Dra. Ana Silva', 'Pediatria', 'Reg. 3390', 'Pediatria', 'Ativo'],
-  ['Dr. Luís Ferro', 'Radiologia', 'Reg. 5512', 'Imagiologia', 'Ativo'],
-  ['Dra. Sofia Neto', 'Cardiologia', 'Reg. 2287', 'Cardiologia', 'Inativo'],
+  { id: 'PR-0001', nome: 'Carlos Mendes', honorifico: 'Dr.', especialidade: 'Clínica Geral', registo: 'Reg. 4821', departamento: 'Consultas Externas', estado: 'Ativo' },
+  { id: 'PR-0002', nome: 'Ana Silva', honorifico: 'Dra.', especialidade: 'Pediatria', registo: 'Reg. 3390', departamento: 'Pediatria', estado: 'Ativo' },
+  { id: 'PR-0003', nome: 'Luís Ferro', honorifico: 'Dr.', especialidade: 'Radiologia', registo: 'Reg. 5512', departamento: 'Imagiologia', estado: 'Ativo' },
+  { id: 'PR-0004', nome: 'Sofia Neto', honorifico: 'Dra.', especialidade: 'Cardiologia', registo: 'Reg. 2287', departamento: 'Cardiologia', estado: 'Inativo' },
+]
+
+export const relatorios = [
+  {
+    id: 'R-0001',
+    pacienteId: 'P-0001',
+    tipo: 'Geral',
+    profissionalId: 'PR-0001',
+    data: '2025-04-26',
+    estado: 'Finalizado',
+    resumo:
+      'Paciente observado na consulta de rotina. Quadro clínico estável, sem queixas relevantes. Sinais vitais dentro dos parâmetros normais. Recomenda-se manutenção do tratamento atual e reavaliação dentro de 30 dias.',
+    notas: 'O paciente refere boa adesão à medicação. Sem efeitos secundários reportados. Exames laboratoriais anteriores dentro da normalidade.',
+  },
+  {
+    id: 'R-0002',
+    pacienteId: 'P-0002',
+    tipo: 'Consulta',
+    profissionalId: 'PR-0002',
+    data: '2025-04-24',
+    estado: 'Rascunho',
+    resumo: 'Consulta de seguimento pediátrico. Crescimento dentro dos valores esperados para a idade.',
+    notas: 'A completar com resultados de exame requisitados.',
+  },
+  {
+    id: 'R-0003',
+    pacienteId: 'P-0003',
+    tipo: 'Exame',
+    profissionalId: 'PR-0003',
+    data: '2025-04-22',
+    estado: 'Em revisão',
+    resumo: 'Registado de imagiologia compatível com ecografia abdominal sem alterações significativas.',
+    notas: 'Aguarda validação do departamento de radiologia.',
+  },
+  {
+    id: 'R-0004',
+    pacienteId: 'P-0004',
+    tipo: 'Alta',
+    profissionalId: 'PR-0001',
+    data: '2025-04-20',
+    estado: 'Corrigido',
+    resumo: 'Alta clínica após internamento. Quadro resolvido, com indicação de regresso à actividade habitual.',
+    notas: 'Consulta de revisão agendada para 30 dias.',
+  },
+  {
+    id: 'R-0005',
+    pacienteId: 'P-0005',
+    tipo: 'Acompanhamento',
+    profissionalId: 'PR-0002',
+    data: '2025-04-18',
+    estado: 'Finalizado',
+    resumo: 'Consulta de acompanhamento. Sem alterações do plano terapêutico vigente.',
+    notas: '',
+  },
+]
+
+export const exames = [
+  { id: 'EX-0001', pacienteId: 'P-0001', nome: 'Hemograma completo', departamento: 'Laboratório', data: '2025-04-18', profissionalId: 'PR-0001', estado: 'Validado' },
+  { id: 'EX-0002', pacienteId: 'P-0002', nome: 'Radiografia de tórax', departamento: 'Radiologia', data: '2025-04-16', profissionalId: 'PR-0002', estado: 'Resultado disponível' },
+  { id: 'EX-0003', pacienteId: 'P-0003', nome: 'Ecografia abdominal', departamento: 'Ecografia', data: '2025-04-12', profissionalId: 'PR-0003', estado: 'Realizado' },
+  { id: 'EX-0004', pacienteId: 'P-0004', nome: 'ECG', departamento: 'Cardiologia', data: '2025-04-09', profissionalId: 'PR-0001', estado: 'Solicitado' },
+]
+
+export const prescricoes = [
+  { id: 'PS-0001', pacienteId: 'P-0001', medicamento: 'Omeprazol 20mg', profissionalId: 'PR-0001', data: '2025-04-26', estado: 'Ativa' },
+  { id: 'PS-0002', pacienteId: 'P-0002', medicamento: 'Paracetamol 500mg', profissionalId: 'PR-0002', data: '2025-04-24', estado: 'Concluída' },
+  { id: 'PS-0003', pacienteId: 'P-0004', medicamento: 'Losartan 50mg', profissionalId: 'PR-0001', data: '2025-04-20', estado: 'Ativa' },
+  { id: 'PS-0004', pacienteId: 'P-0005', medicamento: 'Amoxicilina 875mg', profissionalId: 'PR-0002', data: '2025-04-18', estado: 'Cancelada' },
+]
+
+export const documentos = [
+  { id: 'DOC-0001', nome: 'Relatório_Consulta_Abr2025.pdf', pacienteId: 'P-0001', tipo: 'Relatório', tamanhoBytes: 219136, data: '2025-04-26', estado: 'Validado' },
+  { id: 'DOC-0002', nome: 'Hemograma_Completo.pdf', pacienteId: 'P-0002', tipo: 'Exame', tamanhoBytes: 100352, data: '2025-04-24', estado: 'Validado' },
+  { id: 'DOC-0003', nome: 'Receita_Omeprazol.pdf', pacienteId: 'P-0001', tipo: 'Receita', tamanhoBytes: 53248, data: '2025-04-23', estado: 'Ativo' },
+  { id: 'DOC-0004', nome: 'Declaracao_Medica.pdf', pacienteId: 'P-0004', tipo: 'Declaração', tamanhoBytes: 62464, data: '2025-04-20', estado: 'Validado' },
+  { id: 'DOC-0005', nome: 'Radiografia_Torax.jpg', pacienteId: 'P-0003', tipo: 'Imagem', tamanhoBytes: 1468006, data: '2025-04-18', estado: 'Validado' },
 ]
 
 export const auditoria = [
-  ['26/04/2025 14:30', 'Carlos Mendes', 'Visualizou relatório', 'R-0001', 'João Manuel', 'Sucesso'],
-  ['24/04/2025 12:40', 'Ana Silva', 'Criou paciente', 'P-0004', 'Maria Isabel', 'Sucesso'],
-  ['23/04/2025 10:15', 'Luís Ferro', 'Editou relatório', 'R-0003', 'Pedro António', 'Sucesso'],
-  ['22/04/2025 09:02', 'Carlos Mendes', 'Alterou permissões', '—', '—', 'Sucesso'],
+  { id: 'AUD-0001', dataHora: '2025-04-26T14:30:00', utilizadorId: 'PR-0001', acao: 'Visualizou relatório', entidade: 'Relatório', referencia: 'R-0001', pacienteId: 'P-0001', resultado: 'Sucesso' },
+  { id: 'AUD-0002', dataHora: '2025-04-24T12:40:00', utilizadorId: 'PR-0002', acao: 'Criou paciente', entidade: 'Paciente', referencia: 'P-0004', pacienteId: 'P-0004', resultado: 'Sucesso' },
+  { id: 'AUD-0003', dataHora: '2025-04-23T10:15:00', utilizadorId: 'PR-0003', acao: 'Editou relatório', entidade: 'Relatório', referencia: 'R-0003', pacienteId: 'P-0003', resultado: 'Sucesso' },
+  { id: 'AUD-0004', dataHora: '2025-04-22T09:02:00', utilizadorId: 'PR-0001', acao: 'Alterou permissões', entidade: 'Perfil', referencia: null, pacienteId: null, resultado: 'Sucesso' },
 ]
 
-export const statusColor = (s) => ({
-  Ativo: 'bg-green-100 text-ok',
-  Inativo: 'bg-slate-100 text-muted',
-  Finalizado: 'bg-green-100 text-ok',
-  Rascunho: 'bg-slate-100 text-muted',
-  'Em revisão': 'bg-amber-100 text-warn',
-  Corrigido: 'bg-blue-100 text-accent',
-  Validado: 'bg-green-100 text-ok',
-  Ativa: 'bg-green-100 text-ok',
-  Concluída: 'bg-blue-100 text-accent',
-  Cancelada: 'bg-red-100 text-bad',
-  Sucesso: 'bg-green-100 text-ok',
-  'Resultado disponível': 'bg-blue-100 text-accent',
-  Realizado: 'bg-green-100 text-ok',
-  Solicitado: 'bg-amber-100 text-warn',
-}[s] || 'bg-slate-100 text-muted')
+export const notificacoes = [
+  { id: 'N-0001', titulo: 'Relatório R-0001 finalizado', corpo: 'O relatório de João Manuel Silva foi finalizado.', dataHora: '2025-04-26T14:30:00', lida: false, ligação: '/relatorios/R-0001' },
+  { id: 'N-0002', titulo: 'Exame pendente de validação', corpo: 'A radiografia de Ana Cristina Domingos tem resultado disponível.', dataHora: '2025-04-24T09:10:00', lida: false, ligação: '/exames' },
+  { id: 'N-0003', titulo: 'Relatório em revisão', corpo: 'R-0003 aguarda validação da radiologia.', dataHora: '2025-04-23T10:15:00', lida: true, ligação: '/relatorios/R-0003' },
+]

@@ -13,7 +13,7 @@ const links = [
   { to: '/configuracoes', icon: 'settings', label: 'Configurações' },
 ]
 
-export default function Sidebar({ open, onClose }) {
+export default function Sidebar({ open, onClose, onLogout }) {
   return (
     <>
       {open && (
@@ -45,10 +45,13 @@ export default function Sidebar({ open, onClose }) {
           ))}
         </nav>
         <div className="p-3 border-t border-white/10">
-          <NavLink to="/" className="flex items-center gap-3 px-3 py-2 rounded text-sm text-slate-300 hover:bg-white/10 hover:text-white">
+          <button
+            onClick={onLogout}
+            className="w-full flex items-center gap-3 px-3 py-2 rounded text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors"
+          >
             <Icon name="logout" className="w-4 h-4" />
             Sair
-          </NavLink>
+          </button>
         </div>
       </aside>
     </>
